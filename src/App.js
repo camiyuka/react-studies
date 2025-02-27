@@ -1,15 +1,17 @@
 import './App.css';
 import Array from './components/Array'
+import {useState} from 'react'
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 function App() {
-
-  const itens = ['react', 'view', 'angular']
+  const [nome, setNome]=useState('')
 
   return (
     <div className="App">
-      <h1>Renderização de Listas</h1>
-      <Array itens={itens}/>
-      <Array itens={[]}/>
+      <h1>State Lift</h1>
+      <SeuNome setNome={setNome}/>
+      <Saudacao nome={nome} />
     </div>
   );
 }
